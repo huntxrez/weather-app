@@ -7,7 +7,7 @@ function WeatherShow(props:any):any {
     const [temp,setTemp]=React.useState<number>(props.weather.tempByKelvin);
     useEffect(()=>{
         ConvertTemp();
-    },[props.selectedTempTypeId]);
+    });
     function ConvertTemp():void {
         switch(props.selectedTempTypeId){
             case 0:
