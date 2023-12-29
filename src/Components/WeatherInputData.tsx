@@ -1,4 +1,4 @@
-import React,{ReactNode, useEffect} from 'react';
+import React, { ReactElement } from 'react';
 import  WeatherModel  from '../Models/weatherModel';
 import axios from 'axios';
 import WeatherShow from './WeatherShow';
@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { tempType } from '../Models/tempType';
 
-function WeatherInputData():any {
+function WeatherInputData():ReactElement {
     const API_KEY:string = 'd9fc5e7986aad5f2bd59d51c28da6be2';
     const [cityName,setCityName]=React.useState<string>('');
     const [exception,setException] = React.useState<string>('');
@@ -60,8 +60,7 @@ function WeatherInputData():any {
         {listTypes}
     </select>
     <button type='button'className='btn btn-primary form-control' onClick={RequestSendClick}>Request</button>
-    {!isReady?<h1 className='text-center'>{exception}</h1>:null}
-    {isReady?<WeatherShow  selectedTempTypeId={tempTypeById} weather={weatherData}/>:null}
+    {isReady?<WeatherShow  selectedTempTypeId={tempTypeById} weather={weatherData}/>:<h1 className='text-center'>{exception}</h1>}
     </div>
     );
 }
