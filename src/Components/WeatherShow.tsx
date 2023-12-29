@@ -34,7 +34,7 @@ function WeatherShow(props:any):ReactElement {
                 <th scope="col">Скорость ветра</th>
             </tr>
             </thead>
-            <tbody className="">
+            <tbody className="tbody-light">
             <tr>
             <td>{props.weather.city}</td>
             <td>{props.weather.country}</td>

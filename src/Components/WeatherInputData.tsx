@@ -49,7 +49,7 @@ function WeatherInputData():ReactElement {
             console.log(error);
         });
     }
-    const listTypes = Object.values(tempType).map((key,index) =>(<option key={index} value={index}>{key}</option>));
+    const listTypes = Object.values(tempType).map((val,index) =>(<option key={index} value={index}>{val}</option>));
     const RequestSendClick=()=>{
     getWeatherDataFromAPI();
     }
