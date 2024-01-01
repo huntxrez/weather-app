@@ -1,11 +1,11 @@
 
-import React,{ReactElement, useEffect} from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-function WeatherShow(props:any):ReactElement {
+function WeatherShow(props:any):React.ReactElement {
     const [temp,setTemp]=React.useState<number>(props.weather.tempByKelvin);
-    useEffect(()=>{
+    React.useEffect(()=>{
         ConvertTemp();
     });
     function ConvertTemp():void {

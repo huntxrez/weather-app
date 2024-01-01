@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import  WeatherModel  from '../Models/weatherModel';
 import axios from 'axios';
 import WeatherShow from './WeatherShow';
@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { tempType } from '../Models/tempType';
 
-function WeatherInputData():ReactElement {
+function WeatherInputData():React.ReactElement {
     const API_KEY:string = 'd9fc5e7986aad5f2bd59d51c28da6be2';
     const [cityName,setCityName]=React.useState<string>('');
     const [exception,setException] = React.useState<string>('');
